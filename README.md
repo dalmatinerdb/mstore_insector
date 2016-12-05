@@ -21,8 +21,8 @@ The index file generated looks like:
   SizePerSection:64,          %% size of each bitmap (this includes the prefix!)
   SizeOfIndex:64,             %% size of the index section
   Index:SizeOfIndex/binary,   %% index Section
-  Bitmaps/binary.             %% bitmaps
->>
+  Bitmaps/binary              %% bitmaps
+>>.
 ```
 
 Bitmaps are stored using the [bitmap library](https://github.com/dalmatinerdb/bitmap)
@@ -34,7 +34,7 @@ Bitmaps are stored using the [bitmap library](https://github.com/dalmatinerdb/bi
   Size:32,       %% Size of this entry
   Element:Size,  %% Entry
   Rest/binary    %% The rest
->>
+>>.
 ```
 
 ## Comparison logic
