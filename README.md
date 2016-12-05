@@ -33,7 +33,7 @@ Bitmaps are stored using the [bitmap library](https://github.com/dalmatinerdb/bi
 <<
   Size:32,       %% Size of this entry
   Element:Size,  %% Entry
-  Rest/binary.   %% The rest
+  Rest/binary    %% The rest
 >>
 ```
 
