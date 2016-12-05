@@ -1,0 +1,10 @@
+{"1.1.0",
+[{<<"mmath">>,{pkg,<<"mmath">>,<<"0.2.13">>},1},
+ {<<"mstore">>,{pkg,<<"mstore">>,<<"0.1.20">>},0},
+ {<<"trie">>,{pkg,<<"trie">>,<<"1.5.4">>},1}]}.
+[
+{pkg_hash,[
+ {<<"mmath">>, <<"1B11E23B2D11E5D4897A30BAB3779CAAAB8E90EF82F3576D73ECE790DB0F4E57">>},
+ {<<"mstore">>, <<"708CECBA2387821424A460BC703F5AD55E77EF4909385322849D926B1BD6B2CA">>},
+ {<<"trie">>, <<"DC9A5A076FEE8A168FEAB7E35B5100ADC58D6B4F031F4D87CE2F372FCFFD8E53">>}]}
+].
