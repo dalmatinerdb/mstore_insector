@@ -5,7 +5,8 @@
   {applications,
    [kernel,
     stdlib,
-    mstore
+    mstore,
+    bitmap
    ]},
   {env,[]},
   {modules, []},
