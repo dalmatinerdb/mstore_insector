@@ -54,7 +54,6 @@ get(File, Metric) ->
             {ok, Dummy} = bitmap:new([{size, Size}]),
             ChunkSize = byte_size(Dummy),
             Offset = ChunkSize * Idx,
-            io:format("Offset: ~p~n", [Offset]),
             {ok, IO} = file:open(File ++ ".bitmap", [read, binary, raw]),
             R = file:pread(IO, Offset, ChunkSize),
             file:close(IO),
