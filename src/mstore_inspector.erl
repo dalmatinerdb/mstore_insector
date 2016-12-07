@@ -109,8 +109,7 @@ set_bitmap(<<_:64, R/binary>>, I, B) ->
     {ok, B1} = bitmap:set(I, B),
     set_bitmap(R, I+1, B1).
 
-fold_fun(Metric, Idx, Data, Acc = #acc{offset = Offset,
-                                       size = Size,
+fold_fun(Metric, Idx, Data, Acc = #acc{size = Size,
                                        metric = undefined}) ->
     {ok, B} = bitmap:new([{size, Size}]),
     B1 = set_bitmap(Data, Idx rem Size, B),
