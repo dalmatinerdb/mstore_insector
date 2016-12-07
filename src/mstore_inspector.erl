@@ -113,7 +113,7 @@ fold_fun(Metric, Idx, Data, Acc = #acc{offset = Offset,
                                        size = Size,
                                        metric = undefined}) ->
     {ok, B} = bitmap:new([{size, Size}]),
-    B1 = set_bitmap(Data, Idx - Offset, B),
+    B1 = set_bitmap(Data, Idx rem Size, B),
     Acc#acc{metric = Metric, bitmap = B1};
 
 fold_fun(Metric, Idx, Data, Acc = #acc{metric = Metric,
