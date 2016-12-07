@@ -116,16 +116,15 @@ fold_fun(Metric, Idx, Data, Acc = #acc{size = Size,
     Acc#acc{metric = Metric, bitmap = B1};
 
 fold_fun(Metric, Idx, Data, Acc = #acc{metric = Metric,
-                                       offset = Offset,
-                                       bitmap = B}) ->
-    B1 = set_bitmap(Data, Idx - Offset, B),
-    Acc#acc{bitmap = B1};
-fold_fun(Metric, Idx, Data, Acc = #acc{offset = Offset,
                                        size = Size,
+                                       bitmap = B}) ->
+    B1 = set_bitmap(Data, Idx rem Size, B),
+    Acc#acc{bitmap = B1};
+fold_fun(Metric, Idx, Data, Acc = #acc{size = Size,
                                        bitmap = BOld,
                                        io = IO}) ->
     {ok, B} = bitmap:new([{size, Size}]),
-    B1 = set_bitmap(Data, Idx - Offset, B),
+    B1 = set_bitmap(Data, Idx rem Size, B),
     ok = file:write(IO, BOld),
     Acc#acc{metric = Metric, bitmap = B1}.
 
