@@ -1,9 +1,7 @@
 -module(mstore_inspector).
 
 %% API exports
--export([create/1, display/1, get/2, main/1, compare/3]).
-
--include_lib("mmath/include/mmath.hrl").
+-export([display/1, get/2, main/1, compare/3]).
 
 -record(acc, {
           offset,
@@ -56,7 +54,7 @@ compare(Metric, FileL, FileR) ->
 
 %% escript Entry point
 main(["create", File]) ->
-    mfile:fold(File, ?DATA_SIZE, fun fold_fun/4, 4096, ok),
+    mfile:fold(File, fun fold_fun/4, 4096, ok),
     erlang:halt(1);
 
 main(["metrics", File]) ->
