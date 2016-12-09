@@ -18,18 +18,6 @@
 %% API functions
 %%====================================================================
 
-create(File) ->
-    {ok, F} = mfile:open(File),
-    {ok, IO} = file:open(File ++ ".bitmap", [write, binary, raw]),
-    Acc0 = #acc{
-              io = IO,
-              size = mfile:size(F),
-              offset = mfile:offset(F)
-             },
-    #acc{bitmap = B} = mfile:fold(F, ?DATA_SIZE, fun fold_fun/4, 4096, Acc0),
-    ok = file:write(IO, B),
-    file:close(IO).
-
 display(File) ->
     {ok, F} = mfile:open(File),
     mfile:close(F),
