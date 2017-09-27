@@ -12,5 +12,5 @@
   {modules, []},
   {maintainers, ["Heinz N. Gies"]},
   {licenses, ["BSD3"]},
-  {links, [{"gitlab", ""https://gitlab.com/Project-FiFo/DalmatinerDB/mstore_inspector}]}
+  {links, [{"gitlab", "https://gitlab.com/Project-FiFo/DalmatinerDB/mstore_inspector"}]}
  ]}.
