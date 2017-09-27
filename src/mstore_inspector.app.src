@@ -1,6 +1,6 @@
 {application, mstore_inspector,
  [{description, "An escript"},
-  {vsn, "0.1.0"},
+  {vsn, git},
   {registered, []},
   {applications,
    [kernel,
